@@ -17,16 +17,16 @@ The commands in this lab must be run on each controller instance: `master-1`, an
 Download the official etcd release binaries from the [coreos/etcd](https://github.com/coreos/etcd) GitHub project:
 
 ```
-wget -q --show-progress --https-only --timestamping \
-  "https://github.com/coreos/etcd/releases/download/v3.3.9/etcd-v3.3.9-linux-amd64.tar.gz"
+wget -q --progress=bar \
+  "https://github.com/etcd-io/etcd/releases/download/v3.5.3/etcd-v3.5.3-linux-amd64.tar.gz"
 ```
 
 Extract and install the `etcd` server and the `etcdctl` command line utility:
 
 ```
 {
-  tar -xvf etcd-v3.3.9-linux-amd64.tar.gz
-  sudo mv etcd-v3.3.9-linux-amd64/etcd* /usr/local/bin/
+  tar -xvf etcd-v3.5.3-linux-amd64.tar.gz
+  sudo mv etcd-v3.5.3-linux-amd64/etcd* /usr/local/bin/
 }
 ```
 
