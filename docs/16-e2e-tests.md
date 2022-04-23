@@ -25,7 +25,7 @@ kubetest --extract=v1.13.0
 
 cd kubernetes
 
-export KUBE_MASTER_IP="192.168.5.11:6443"
+export KUBE_MASTER_IP="10.0.2.4:6443"
 
 export KUBE_MASTER=master-1
 
