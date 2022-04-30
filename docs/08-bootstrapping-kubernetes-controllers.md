@@ -225,7 +225,7 @@ loadbalancer# sudo apt-get update && sudo apt-get install -y haproxy
 ```
 loadbalancer# cat <<EOF | sudo tee /etc/haproxy/haproxy.cfg 
 frontend kubernetes
-    bind 10.0.2.9:6443
+    bind 10.0.2.10:6443
     option tcplog
     mode tcp
     default_backend kubernetes-master-nodes
@@ -248,7 +248,7 @@ loadbalancer# sudo service haproxy restart
 Make a HTTP request for the Kubernetes version info:
 
 ```
-curl  https://10.0.2.9:6443/version -k
+curl  https://10.0.2.10:6443/version -k
 ```
 
 > output

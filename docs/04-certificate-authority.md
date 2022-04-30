@@ -152,7 +152,7 @@ DNS.4 = kubernetes.default.svc.cluster.local
 IP.1 = 10.96.0.1
 IP.2 = 10.0.2.4
 IP.3 = 10.0.2.5
-IP.4 = 10.0.2.9
+IP.4 = 10.0.2.10
 IP.5 = 127.0.0.1
 EOF
 ```

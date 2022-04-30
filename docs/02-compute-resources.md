@@ -28,7 +28,7 @@ This does the below:
     | master-2     | kubernetes-ha-master-2 | Master        | 10.0.2.5 |     2712         |
     | worker-1     | kubernetes-ha-worker-1 | Worker        | 10.0.2.7 |     2730         |
     | worker-2     | kubernetes-ha-worker-2 | Worker        | 10.0.2.8 |     2721         |
-    | lb           | kubernetes-ha-lb       | LoadBalancer  | 10.0.2.9 |     2722         |
+    | lb           | kubernetes-ha-lb       | LoadBalancer  | 10.0.2.10 |     2722         |
 
     > These are the default settings. These can be changed in the Vagrant file
 

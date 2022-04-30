@@ -51,7 +51,7 @@ When generating kubeconfig files for Kubelets the client certificate matching th
 
 Get the kub-api server load-balancer IP.
 ```
-LOADBALANCER_ADDRESS=10.0.2.9
+LOADBALANCER_ADDRESS=10.0.2.10
 ```
 
 Generate a kubeconfig file for the first worker node:
