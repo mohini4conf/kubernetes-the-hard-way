@@ -113,12 +113,38 @@ Results:
 worker-1.kubeconfig
 ```
 
+worker-2
+```
+{
+  kubectl config set-cluster kubernetes-the-hard-way \
+    --certificate-authority=ca.crt \
+    --embed-certs=true \
+    --server=https://${LOADBALANCER_ADDRESS}:6443 \
+    --kubeconfig=worker-2.kubeconfig
+
+  kubectl config set-credentials system:node:worker-2 \
+    --client-certificate=worker-2.crt \
+    --client-key=worker-2.key \
+    --embed-certs=true \
+    --kubeconfig=worker-2.kubeconfig
+
+  kubectl config set-context default \
+    --cluster=kubernetes-the-hard-way \
+    --user=system:node:worker-2 \
+    --kubeconfig=worker-2.kubeconfig
+
+  kubectl config use-context default --kubeconfig=worker-2.kubeconfig
+}
+```
+
 ### Copy certificates, private keys and kubeconfig files to the worker node:
 
 ```
 master-1$ scp ca.crt worker-1.crt worker-1.key worker-1.kubeconfig worker-1:~/
 ```
-
+```
+master-1$ scp ca.crt worker-2.crt worker-2.key worker-2.kubeconfig worker-2:~/
+```
 ### Download and Install Worker Binaries
 
 Going forward all activities are to be done on the `worker-1` node.
